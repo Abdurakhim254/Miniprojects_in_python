@@ -349,10 +349,11 @@ class Tic_tac_toe(QMainWindow):
          if (self.b1.text()=="X"and self.b2.text()=="X" and self.b3.text()=="X")or (self.b1.text()=="X" and self.b4.text()=="X" and self.b7.text()=="X")or(self.b1.text()=="X" and self.b5.text()=="X" and self.b9.text()=="X")or(self.b4.text()=="X" and self.b5.text()=="X" and self.b6.text()=="X")or(self.b7.text()=="X" and self.b8.text()=="X" and self.b9.text()=="X")or(self.b3.text()=="X" and self.b6.text()=="X" and self.b9.text()=="X"):
             self.lb3.setText(f"O'yin Tugadi! G'olib:{self.ln1.text()} nomli o'yinchi")
             self.lb3.setVisible(True)
+            return
          elif(self.b1.text()=="O"and self.b2.text()=="O" and self.b3.text()=="O")or (self.b1.text()=="O" and self.b4.text()=="O" and self.b7.text()=="O")or(self.b1.text()=="O" and self.b5.text()=="O" and self.b9.text()=="O")or(self.b4.text()=="O" and self.b5.text()=="O" and self.b6.text()=="O")or(self.b7.text()=="O" and self.b8.text()=="O" and self.b9.text()=="O")or(self.b3.text()=="O" and self.b6.text()=="O" and self.b9.text()=="O"):
-             self.lb3.setText(f"O'yin Tugadi! G'olib:Kompyuter !!!")
-             self.lb3.setVisible(True)
-        
+                self.lb3.setText(f"O'yin Tugadi! G'olib:Kompyuter !!!")
+                self.lb3.setVisible(True)
+                return
     def change_btn1(self):
         if self.b1.text()=="" and Tic_tac_toe.check==False:
             self.b1.setFont(QFont("Consolas",32))
@@ -529,10 +530,12 @@ class Tic_tac_toe(QMainWindow):
         if (self.b1.text()=="X"and self.b2.text()=="X" and self.b3.text()=="X")or (self.b1.text()=="X" and self.b4.text()=="X" and self.b7.text()=="X")or(self.b1.text()=="X" and self.b5.text()=="X" and self.b9.text()=="X")or(self.b4.text()=="X" and self.b5.text()=="X" and self.b6.text()=="X")or(self.b7.text()=="X" and self.b8.text()=="X" and self.b9.text()=="X")or(self.b3.text()=="X" and self.b6.text()=="X" and self.b9.text()=="X"):
             self.lb3.setText(f"O'yin Tugadi! G'olib:{self.ln1.text()} nomli o'yinchi")
             self.lb3.setVisible(True)
+            return
            
         elif(self.b1.text()=="O"and self.b2.text()=="O" and self.b3.text()=="O")or (self.b1.text()=="O" and self.b4.text()=="O" and self.b7.text()=="O")or(self.b1.text()=="O" and self.b5.text()=="O" and self.b9.text()=="O")or(self.b4.text()=="O" and self.b5.text()=="O" and self.b6.text()=="O")or(self.b7.text()=="O" and self.b8.text()=="O" and self.b9.text()=="O")or(self.b3.text()=="O" and self.b6.text()=="O" and self.b9.text()=="O"):
             self.lb3.setText(f"O'yin Tugadi! G'olib:{self.ln2.text()} nomli o'yinchi")
             self.lb3.setVisible(True)
+            return
 if __name__=="__main__":
     app=QApplication(sys.argv)
     mn=Tic_tac_toe()
